@@ -1,0 +1,7 @@
+#service{
+    flex-direction: column;
+}
+
+#clients{
+    overflow: hidden;
+}

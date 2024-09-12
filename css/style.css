@@ -1,0 +1,204 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --navbar-height: 59px;
+}
+#navbar{
+    display: flex;   /* title in one line*/
+    position:sticky; /* this is use for hold top navbar title*/
+    top: 0;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black; 
+    position: absolute;
+    top: 0px;          /*  or color black jo sab page ki use krete hai kyo ki title home ki position change na ho*/
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;     /*use karte hai home,about ki visual effect change krne k liye*/
+    opacity: 0.9;     /*black color ki cpacity increase or decrease krne k liye*/
+}
+#logo{
+    margin:-8px 30px;
+}
+/*   this is used to size increse /decreasse  */
+#logo img{
+    height: 54px;
+    margin: 4px 4px;
+}/*this use to arange in alignment in horizontal home, about*/
+
+#navbar ul{
+    display:flex;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem ; 
+}
+#navbar ul li a{
+    color: white;           /* yaha pr padding dege ko ki hover karna hai*/ 
+    display: block;
+    padding: 8px 17px;
+    border-radius: 20px;
+    text-decoration: none;  /* this is use to add or remove underline*/
+}
+
+#navbar ul li a:hover{
+    color:black;
+    background-color: white;
+}
+/* home section css */
+#home h1{
+    color: white;
+    text-align: center;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#home{
+    display: flex;               /* one line me add krne k liye*/
+    flex-direction: column; 
+    padding: -1px 200px;        /*for size*/
+    height: 466px;
+    justify-content: center;
+    align-items: center     /*both side centre*/
+}   
+#home::before{
+    content: "";
+    position: absolute;          /*  or color black jo sab page ki use krete hai kyo ki title home ki position change na ho*/
+    background:url(../image/backphoto.jpg) no-repeat center center/cover; /*iska use kr ke photos centre m a jati hai*/
+    top: 0px;          /*  or color black jo sab page ki use krete hai kyo ki title home ki position change na ho*/
+    left: 0px;
+    height: 555px;
+    width: 100%;
+    z-index: -1;     /*use karte hai home,about ko show karne k liye*/
+    opacity: 0.87;
+
+}
+/* after button section are service */
+#service{
+    margin: 34px;
+    display: flex;
+}
+#service .box{
+    border: 2px solid brown;
+    padding: 32px;
+    margin: 2px 18px;
+    border-radius: 28px;
+    background-color: rgb(195, 203, 203);
+}
+#service .box img{
+    height: 100px;
+    margin: auto;
+    display: block
+}   
+#service .box p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* client section  */
+
+#client-section{    
+    height: 300px;
+    position: relative;
+}
+#client-section::before{    
+content:"" ;
+position: absolute;
+background: url('../image/yogurt-1442034_1920.jpg');
+width:100%;
+height: 100%;
+z-index: -1 ;
+opacity:0.4;
+
+}
+#client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 34px;
+}
+#client img{
+    height: 70px;
+}
+
+/*contact form css*/
+
+#contact{
+    position: relative;
+}
+#contact::before{
+    content:'' ;
+    position: absolute;
+    width:100% ;
+    height:100% ;
+    z-index: -1;
+    opacity: 0.4;
+    background: url('../image/contactback.png') no-repeat center center/cover;
+}
+
+/*in which form filling css are include*/
+#contact-box{
+    display: flex;               /*contant ko center m lane k liye*/
+    justify-content: center;
+    align-items: center;         
+    padding-bottom: 40px;
+}
+#contact-box input,                 /*comma is more imp*/
+#contact-box textarea{
+    width:100% ;
+    padding:0.5rem ;
+    border-radius: 1rem;              /*in form text bordeerr changes*/
+    font-size: 1rem;                  /*text front changes*/ 
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+}
+
+
+
+/*footer part means lastr part are here*/
+
+footer{
+    background-color:black;
+    color: red;
+    padding: 10px ;
+}
+
+
+/* utility classes */
+h1.h-primary{
+    color:rgb(18, 18, 17);
+    font-size: 3.6rem;
+    padding: 30px;
+}
+h2.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+
+.button{
+    padding: 2px 20px;
+    border: 2px;
+    background-color:red;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+.center{
+    text-align: center;
+}
